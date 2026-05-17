@@ -1,0 +1,19 @@
+{
+    "name": "test-assignment/blog",
+    "description": "Test assignment: blog",
+    "type": "project",
+    "require": {
+        "php": "^8.5",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "smarty/smarty": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "TestAssignmentBlog\\": "app/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

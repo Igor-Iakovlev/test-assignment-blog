@@ -1,0 +1,7 @@
+/.env
+/src/vendor/
+/src/templates_c/*
+/src/cache/*
+!/src/templates_c/.gitkeep
+!/src/cache/.gitkeep
+.idea/
