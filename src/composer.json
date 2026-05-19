@@ -4,6 +4,7 @@
     "type": "project",
     "require": {
         "php": "^8.5",
+        "ext-ctype": "*",
         "ext-pdo": "*",
         "ext-pdo_mysql": "*",
         "smarty/smarty": "^5.4"
@@ -15,5 +16,8 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.24"
     }
 }
