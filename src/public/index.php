@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use TestAssignmentBlog\Controllers\CategoryController;
 use TestAssignmentBlog\Controllers\HomeController;
 use TestAssignmentBlog\Core\Router;
 use TestAssignmentBlog\Core\View;
@@ -13,6 +14,7 @@ $view = new View();
 
 $router = new Router();
 $router->get('/', [HomeController::class, 'index']);
+$router->get('/category/{slug}', [CategoryController::class, 'show']);
 
 try {
     [$class, $action, $params] = $router->dispatch(

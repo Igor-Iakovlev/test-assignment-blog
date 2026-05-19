@@ -21,4 +21,18 @@ class Category
 
         return Database::connection()->query($sql)->fetchAll();
     }
+
+    /**
+     * @return array<string, mixed>|null
+     */
+    public static function findBySlug(string $slug): ?array
+    {
+        $stmt = Database::connection()->prepare(
+            'SELECT id, slug, name, description FROM categories WHERE slug = :slug'
+        );
+        $stmt->execute(['slug' => $slug]);
+        $row = $stmt->fetch();
+
+        return $row === false ? null : $row;
+    }
 }
