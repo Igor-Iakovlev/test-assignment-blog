@@ -6,6 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use TestAssignmentBlog\Controllers\CategoryController;
 use TestAssignmentBlog\Controllers\HomeController;
+use TestAssignmentBlog\Controllers\PostController;
 use TestAssignmentBlog\Core\Router;
 use TestAssignmentBlog\Core\View;
 use TestAssignmentBlog\Exceptions\NotFoundException;
@@ -15,6 +16,7 @@ $view = new View();
 $router = new Router();
 $router->get('/', [HomeController::class, 'index']);
 $router->get('/category/{slug}', [CategoryController::class, 'show']);
+$router->get('/post/{slug}', [PostController::class, 'show']);
 
 try {
     [$class, $action, $params] = $router->dispatch(
