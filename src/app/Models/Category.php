@@ -28,7 +28,7 @@ class Category
     public static function findBySlug(string $slug): ?array
     {
         $stmt = Database::connection()->prepare(
-            'SELECT id, slug, name, description FROM categories WHERE slug = :slug'
+            'SELECT id, slug, name, description FROM categories WHERE slug = :slug',
         );
         $stmt->execute(['slug' => $slug]);
         $row = $stmt->fetch();

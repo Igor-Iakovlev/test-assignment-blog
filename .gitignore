@@ -7,3 +7,4 @@
 /src/public/css/*
 !/src/public/css/.gitkeep
 .idea/
+.php-cs-fixer.cache

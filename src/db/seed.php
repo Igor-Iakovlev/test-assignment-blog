@@ -134,7 +134,7 @@ function seedCategories(PDO $pdo, Generator $faker, int $count): void
     }
 
     $insert = $pdo->prepare(
-        'INSERT INTO categories (slug, name, description) VALUES (:slug, :name, :description)'
+        'INSERT INTO categories (slug, name, description) VALUES (:slug, :name, :description)',
     );
     foreach (array_slice($candidates, 0, $count) as [$slug, $name, $description]) {
         $insert->execute([
@@ -161,10 +161,10 @@ function seedPosts(PDO $pdo, Generator $faker, array $categoryIds, int $count): 
 
     $insertPost = $pdo->prepare(
         'INSERT INTO posts (slug, title, description, body, image, views, published_at)
-         VALUES (:slug, :title, :description, :body, :image, :views, :published_at)'
+         VALUES (:slug, :title, :description, :body, :image, :views, :published_at)',
     );
     $insertPostCategory = $pdo->prepare(
-        'INSERT INTO post_categories (post_id, category_id) VALUES (:post_id, :category_id)'
+        'INSERT INTO post_categories (post_id, category_id) VALUES (:post_id, :category_id)',
     );
 
     $offset = countRows($pdo, 'posts');
@@ -186,7 +186,7 @@ function seedPosts(PDO $pdo, Generator $faker, array $categoryIds, int $count): 
 
         $assigned = $faker->randomElements(
             $categoryIds,
-            $faker->numberBetween(1, min(3, count($categoryIds)))
+            $faker->numberBetween(1, min(3, count($categoryIds))),
         );
         foreach ($assigned as $categoryId) {
             $insertPostCategory->execute([
