@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+.site-header {
+    background: $color-surface;
+    border-bottom: 1px solid $color-border;
+    padding: 1rem 0;
+}
+
+.site-title {
+    display: block;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-text;
+
+    &:hover {
+        color: $color-primary;
+        text-decoration: none;
+    }
+}
+
+.site-main {
+    max-width: $container-width;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.site-footer {
+    background: $color-footer-bg;
+    color: $color-footer-text;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}

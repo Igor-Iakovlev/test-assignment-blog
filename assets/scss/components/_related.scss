@@ -1,0 +1,16 @@
+@use '../variables' as *;
+
+.related {
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    padding: 1.5rem;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    .post-list__item {
+        background: $color-bg;
+    }
+}

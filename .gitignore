@@ -4,4 +4,6 @@
 /src/cache/*
 !/src/templates_c/.gitkeep
 !/src/cache/.gitkeep
+/src/public/css/*
+!/src/public/css/.gitkeep
 .idea/

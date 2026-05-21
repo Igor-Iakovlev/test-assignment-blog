@@ -1,0 +1,15 @@
+@use '../variables' as *;
+
+.breadcrumbs {
+    color: $color-muted;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+
+    a {
+        color: $color-muted;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use '../variables' as *;
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+
+    &__item {
+        background: $color-surface;
+        border: 1px solid $color-border;
+        border-radius: $radius;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        margin: 0 0 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    &__meta {
+        color: $color-muted;
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description {
+        margin: 0;
+        color: $color-muted;
+    }
+}

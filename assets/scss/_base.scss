@@ -1,0 +1,45 @@
+@use 'variables' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-text;
+    background: $color-bg;
+}
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-primary-hover;
+        text-decoration: underline;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0 0 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
+}
+
+.empty {
+    color: $color-muted;
+    text-align: center;
+    padding: 2rem;
+}

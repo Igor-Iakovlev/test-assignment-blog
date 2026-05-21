@@ -1,0 +1,26 @@
+@use '../variables' as *;
+
+.category-block {
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: $shadow;
+
+    &__header {
+        margin-bottom: 1.5rem;
+    }
+
+    &__description {
+        color: $color-muted;
+        margin: 0.25rem 0 0;
+    }
+
+    &__posts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}

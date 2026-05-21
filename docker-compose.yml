@@ -35,6 +35,19 @@ services:
     networks:
       - blog
 
+  scss:
+    image: node:24-alpine
+    container_name: test-assignment-blog-scss
+    user: "${UID:-1000}:${GID:-1000}"
+    working_dir: /work
+    volumes:
+      - ./assets/scss:/work/scss:ro
+      - ./src/public/css:/work/css
+      - scss-npm-cache:/.npm
+    command: sh -c "npm install --prefix /tmp sass && /tmp/node_modules/.bin/sass --watch --no-source-map scss/main.scss:css/main.css"
+    networks:
+      - blog
+
   mysql:
     image: mysql:8.4
     container_name: test-assignment-blog-mysql
@@ -63,3 +76,4 @@ networks:
 
 volumes:
   mysql-data:
+  scss-npm-cache:

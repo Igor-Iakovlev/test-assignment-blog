@@ -1,0 +1,18 @@
+@use '../variables' as *;
+
+.category-header {
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    h1 {
+        margin: 0;
+    }
+
+    &__description {
+        color: $color-muted;
+        margin: 0.5rem 0 0;
+    }
+}

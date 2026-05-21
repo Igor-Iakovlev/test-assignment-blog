@@ -1,0 +1,13 @@
+@use '../variables' as *;
+
+.sort-form {
+    margin-bottom: 1.5rem;
+
+    select {
+        padding: 0.4rem 0.5rem;
+        border-radius: $radius;
+        border: 1px solid $color-border;
+        background: $color-surface;
+        font-size: 0.95rem;
+    }
+}
